@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta — Help Game</title>
+  <meta name="description" content="Crie sua conta Help Game como Administrador ou Usuário comum.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9 27c-1 5 2 9 7 9h8c5 0 8-4 7-9l-1-6c-1-4-4-6-8-6h-4c-4 0-7 2-8 6l-1 6Z" fill="#e0b166" stroke="#7a1330" stroke-width="1.4"/>
+          <rect x="6" y="10" width="28" height="15" rx="4" fill="#7a1330" stroke="#4c0c1e" stroke-width="1.4"/>
+          <rect x="11" y="15" width="2.6" height="6" fill="#e0b955"/>
+          <rect x="8.7" y="17.3" width="6" height="2.6" fill="#e0b955"/>
+          <circle cx="26" cy="14.5" r="1.7" fill="#e0b955"/>
+          <circle cx="29.5" cy="18" r="1.7" fill="#e0b955"/>
+        </svg>
+        <span class="brand-name">Help Game<span>Desenvolvedores de jogos</span></span>
+      </a>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="side-rail" aria-label="Acesso rápido">
+      <a href="index.html" title="Início"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10l8-6 8 6v10"/><path d="M10 20v-6h4v6"/></svg></a>
+      <a href="tutoriais.html" title="Hub de tutoriais"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5-9 5-9-5Z"/><path d="M3 8v9l9 5 9-5V8"/><path d="M12 13v9"/></svg></a>
+      <a href="noticias.html" title="Notícias"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 6-6 2 2-6 6-2Z"/></svg></a>
+      <a href="forum.html" title="Fórum"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8l-5 4 5 4"/><path d="M15 8l5 4-5 4"/></svg></a>
+      <div class="sep"></div>
+    </aside>
+
+    <main class="content-area">
+      <div class="wrap register-container">
+        <section class="register-section">
+          <h1>Criar Conta Help Game</h1>
+          <p class="intro-text">Junte-se à comunidade de desenvolvedores GameMaker</p>
+
+          <form id="registerForm" class="register-form">
+            <!-- Tipo de Conta -->
+            <fieldset class="form-group">
+              <legend>Tipo de Conta</legend>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="accountType" value="user" checked>
+                  <span>Usuário Comum</span>
+                  <small>Acesso a tutoriais e fórum</small>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="accountType" value="admin">
+                  <span>Administrador</span>
+                  <small>Pode criar conteúdo e gerenciar comunidade</small>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Dados Pessoais -->
+            <fieldset class="form-group">
+              <legend>Informações Pessoais</legend>
+              
+              <div class="form-input">
+                <label for="fullname">Nome Completo</label>
+                <input 
+                  type="text" 
+                  id="fullname" 
+                  name="fullname" 
+                  placeholder="João Silva"
+                  required
+                >
+              </div>
+
+              <div class="form-input">
+                <label for="username">Nome de Utilizador</label>
+                <input 
+                  type="text" 
+                  id="username" 
+                  name="username" 
+                  placeholder="joao_silva"
+                  minlength="3"
+                  maxlength="20"
+                  required
+                >
+                <small>3-20 caracteres, apenas letras, números e _</small>
+              </div>
+
+              <div class="form-input">
+                <label for="email">Email</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="joao@example.com"
+                  required
+                >
+              </div>
+
+              <div class="form-input">
+                <label for="password">Senha</label>
+                <input 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  placeholder="Mínimo 8 caracteres"
+                  minlength="8"
+                  required
+                >
+                <small>Mínimo 8 caracteres, com letras, números e símbolo</small>
+              </div>
+
+              <div class="form-input">
+                <label for="confirmPassword">Confirmar Senha</label>
+                <input 
+                  type="password" 
+                  id="confirmPassword" 
+                  name="confirmPassword" 
+                  placeholder="Repita a senha"
+                  minlength="8"
+                  required
+                >
+              </div>
+            </fieldset>
+
+            <!-- Termos -->
+            <fieldset class="form-group">
+              <div class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  id="terms" 
+                  name="terms" 
+                  required
+                >
+                <label for="terms">
+                  Concordo com os <a href="#">Termos de Serviço</a> e 
+                  <a href="#">Política de Privacidade</a>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Mensagens -->
+            <div id="formMessage" class="form-message" style="display: none;"></div>
+
+            <!-- Botões -->
+            <div class="form-actions">
+              <button type="submit" class="btn gold" id="submitBtn">Criar Conta</button>
+              <p>Já tem conta? <a href="#login" class="link-login">Acesse aqui</a></p>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/register.js"></script>
+</body>
+</html>
